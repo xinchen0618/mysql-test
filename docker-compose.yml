@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  mysql:
+    build: ./
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: cx654321
+    ports:
+      - "3306:3306"
+    volumes:
+      - "/srv/mysql:/var/lib/mysql"
+    container_name: mysql

@@ -11,3 +11,4 @@ services:
     volumes:
       - "/srv/mysql:/var/lib/mysql"
     container_name: mysql
+    restart: always

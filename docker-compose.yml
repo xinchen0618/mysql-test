@@ -1,10 +1,11 @@
-version: '3.7'
+version: '3.9'
 
 services:
   mysql:
-    build: ./
+    image: mysql:8.0.29
     command: --default-authentication-plugin=mysql_native_password
     environment:
+      TZ: Asia/Shanghai
       MYSQL_ROOT_PASSWORD: cx654321
     ports:
       - "3306:3306"
